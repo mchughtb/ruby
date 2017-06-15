@@ -62,6 +62,7 @@ RUN set -ex \
 ENV BUNDLER_VERSION 1.15.1
 
 RUN gem install bundler --version "$BUNDLER_VERSION"
+RUN apt-get install -yq ruby-dev build-essential
 
 # install things globally, for great justice
 # and don't create ".bundle" in all our apps
