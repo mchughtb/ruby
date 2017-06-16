@@ -63,6 +63,8 @@ ENV BUNDLER_VERSION 1.15.1
 
 RUN curl -sL https://deb.nodesource.com/setup_0.12 | bash -
 RUN apt-get install -y nodejs
+RUN gem install bundler
+
 # install things globally, for great justice
 # and don't create ".bundle" in all our apps
 ENV GEM_HOME /usr/local/bundle
